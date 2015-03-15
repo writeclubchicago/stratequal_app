@@ -1,0 +1,24 @@
+<h1> Create New World Order </h1> 
+<h1> Add New Player </h1> 
+<h2> 
+<li><a href="/todo">To Do</a></li>
+
+<li><a href="/players">Main</a></li>
+
+<%= form_tag '/players' do %>	
+  <div id="form_div">
+    <div class="inner_div">
+	<%= label_tag :last_name %>
+	<%= text_field_tag :last_name %>
+</div> 
+
+
+    <div class="inner_div">
+	<%= label_tag :gender %>
+	<%= text_field_tag :gender %>
+
+    <div class="inner_div">
+	<%= submit_tag "Add Player" %>
+</div> 
+	<% end %>
+</h2> 

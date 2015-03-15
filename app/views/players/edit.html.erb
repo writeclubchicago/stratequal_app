@@ -1,0 +1,22 @@
+<h1> Edit Player </h1> 
+<%= form_tag("/players/#{@player.id}", :method => :patch) do %> 
+<li><a href="/players">Main</a></li>
+
+
+<div class = "inner_div"> 
+	<%= label_tag :last_name %>
+	<%= text_field_tag :last_name, @player.last_name %>	
+</div> 
+<div class = "inner_div"> 
+	<%= label_tag :first_name %>
+	<%= text_field_tag :first_name, @player.first_name %>	
+</div> 
+
+<div class = "inner_div"> 
+	<%= label_tag :gender %>
+	<%= text_field_tag :gender, @player.gender %>
+</div> 
+
+	<%= submit_tag "Edit Player" %>
+</div> 
+	<% end %>

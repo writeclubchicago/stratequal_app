@@ -1,0 +1,32 @@
+<h1>WELCOME TO STRATEQUAL <br> 
+	YOUR TOMORROW IS NOW <br> 
+ </h1>
+<br> 
+<li><a href="/players/new">New Player</a></li>
+<li><a href="/todo">To Do</a></li>
+<h2> 
+<div class="row">
+	<% @players.each do |player| %>
+  <!-- <div class="col-md-3 col-sm-3">	 -->
+  <div class="col-md-6 col-sm-6">	 	
+<a href="/players/<%= player.id %>" ></li> 	
+	<h3> 
+ <%= player.first_name %>
+ <%= player.last_name %> 
+ <%= player.gender %> 
+
+<%=image_tag player.image, width: '120', height: '120' %>
+
+</a> 
+<br>
+	<%= submit_tag "Edit Player" %>
+</a> 
+	</div>	
+	<% end %>
+</h2>
+<br> 
+<%= @response.description.html_safe %> 
+<br> 
+Today's date is <%=Date.today %> 
+Time is <%=Time.now.strftime("%I:%M:%S %p")  %></h2> 
+
