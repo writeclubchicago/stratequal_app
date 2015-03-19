@@ -1,25 +1,8 @@
 <li><a href="/players">Main</a></li>
-
 <h1> Last Name: <%= @player.last_name %> </h1> 
 <h1> First Name: <%= @player.first_name %> </h1> 
-
-
 <h1> Gender: <%= @player.gender %> </h1> 
-<h1> 
-
-
-<%=image_tag @player.image %>
-
-
-
+<h1> <%=image_tag @player.image %>
 </h1> 
-
-
-
-
 <a href=" /players/<%= @player.id %>/edit">Edit</a>
-
-
-
-
 <a href="/players/<%= @player.id %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>

@@ -1,4 +1,5 @@
 class Player < ActiveRecord::Base
+	has_many :skills #always PLURAL
 
 def friendly_time
 	Time.now.strftime("%I:%M:%S %p") 

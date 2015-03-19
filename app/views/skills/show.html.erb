@@ -1,0 +1,13 @@
+
+<li><a href="/skills">Skills</a></li>
+
+<h1> Name: <%= @skill.name %> </h1> 
+<h1> Description: <%= @skill.description %> </h1> 
+<h1> 
+<%=image_tag @skill.image_url %>
+</h1> 
+<h1> Use Skill </h1> 
+
+
+<a href=" /skills/<%= @skill.id %>/edit">Edit</a>
+<a href="/skills/<%= @skill.id %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>

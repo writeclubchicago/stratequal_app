@@ -11,6 +11,7 @@ patch '/players/:id' => 'players#update'
 delete '/players/:id' => 'players#destroy'
 
 get '/skills' => 'skills#index'
+get '/skills/:id' => 'skills#show'
 
 get '/weather' => 'weather#index'
 get '/weather' => 'weather#show'
