@@ -12,6 +12,11 @@ delete '/players/:id' => 'players#destroy'
 
 get '/skills' => 'skills#index'
 get '/skills/:id' => 'skills#show'
+# get '/skills/:id' => 'skills#show'
+
+get '/scenarios' => 'scenarios#index'
+get '/scenarios/:id' => 'scenarios#show'
+
 
 get '/weather' => 'weather#index'
 get '/weather' => 'weather#show'

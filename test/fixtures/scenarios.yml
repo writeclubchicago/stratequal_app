@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scenario: MyString
+  description: MyString
+  short_description: MyString
+  choice_one: MyString
+  choice_two: MyString
+
+two:
+  scenario: MyString
+  description: MyString
+  short_description: MyString
+  choice_one: MyString
+  choice_two: MyString
