@@ -1,6 +1,11 @@
 class Player < ActiveRecord::Base
 	has_many :skills #always PLURAL
 
+
+  def to_param
+	"#{id}-#{last_name.parameterize}"
+  end
+
 def friendly_time
 	Time.now.strftime("%I:%M:%S %p") 
 end 

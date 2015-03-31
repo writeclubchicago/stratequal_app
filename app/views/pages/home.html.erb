@@ -1,0 +1,44 @@
+<h1>Welcome to AngularJS!</h1>
+
+<div ng-app="app">
+  {{ 1 + 1 }}
+
+  <div ng-controller="pageCtrl">
+    {{ purpleHippo }}
+    <div>{{ greenHippo }}</div>
+    <div>
+      <input ng-model="purpleHippo">
+    </div>
+
+    <ul>
+      <li ng-repeat="review in reviews">{{ review }}
+        <!-- <input ng-model="review"> -->
+      </li>
+    </ul>
+
+
+
+
+    <h4>Leave your own review of AngularJS</h4>
+    <input ng-model="newReview">
+    <button ng-click="addReview(newReview)">Add Review</button>
+
+<br> 
+
+<br> 
+    <ul>    	
+      <li ng-repeat="danger in dangers">{{ danger }}
+      </li>
+    </ul>
+
+
+    <h4>Type this exactly</h4>
+    <input ng-model="newDanger">
+    <button ng-click="addDanger(newDanger)">Add Danger</button>
+
+
+
+
+
+  </div>
+</div>

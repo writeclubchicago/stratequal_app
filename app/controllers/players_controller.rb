@@ -40,10 +40,11 @@ end
 
 
 def show
+
 	if params[:id] == "random"
 	@player = Player.all.sample
 	else
-		@player = Player.find(params[:id])
+		@player = Player.find_by(:id => params[:id])
 	end 
 end
 

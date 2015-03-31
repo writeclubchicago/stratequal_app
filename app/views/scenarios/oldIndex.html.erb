@@ -1,0 +1,29 @@
+index.html.erb
+<h1>WELCOME TO STRATEQUAL <br> 
+	SKILLS WILL BE YOUR ESCAPE <br> 
+ </h1>
+<br> 
+<li><a href="/scenarios">Scenario</a></li>
+<li><a href="/todo">To Do</a></li>
+<h2> 
+<div class="row">
+	<% @scenarios.each do |scenario| %>
+  <!-- <div class="col-md-3 col-sm-3">	 -->
+  <div class="col-md-4 col-sm-1 col-sm-1">	 	
+<a href="/scenarios/<%= scenario.id %>" ></li> 	
+	<h3> 
+
+ <%= scenario.id %>
+ <%= scenario.scenario %>
+ <br>
+ <%= scenario.short_description %>  
+ <br> 
+ <%= scenario.description %> 
+>
+	</div>	
+	<% end %>
+</h2>
+
+Today's date is <%=Date.today %> 
+Time is <%=Time.now.strftime("%I:%M:%S %p")  %></h2> 
+
