@@ -1,5 +1,9 @@
 class Scenario < ActiveRecord::Base
+	has_many :players #always PLURAL
+	belongs_to :answer
 # attr_accessible :scenario, :description, :short_description
+
+
   def to_param
 	"#{id}-#{scenario}"
   end

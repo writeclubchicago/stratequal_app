@@ -11,14 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407185201) do
+ActiveRecord::Schema.define(version: 20150408011244) do
 
   create_table "answers", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.integer  "scenario_id", limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "player_id",   limit: 4
+    t.string  "name",        limit: 255
+    t.integer "scenario_id", limit: 4
+    t.integer "player_id",   limit: 4
   end
 
   create_table "locations", force: :cascade do |t|
@@ -30,16 +28,18 @@ ActiveRecord::Schema.define(version: 20150407185201) do
     t.datetime "updated_at"
   end
 
+  create_table "player_answers", force: :cascade do |t|
+    t.integer "player_id", limit: 4
+    t.integer "answer_id", limit: 4
+  end
+
   create_table "players", force: :cascade do |t|
-    t.string   "last_name",  limit: 255
-    t.string   "gender",     limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "first_name", limit: 255
-    t.string   "image",      limit: 255
-    t.string   "tattoo",     limit: 255
-    t.string   "occupation", limit: 255
-    t.string   "woeid",      limit: 255
+    t.string  "last_name",  limit: 255
+    t.string  "gender",     limit: 255
+    t.string  "first_name", limit: 255
+    t.string  "image",      limit: 255
+    t.integer "tattoo_id",  limit: 4
+    t.string  "occupation", limit: 255
   end
 
   create_table "scenarios", force: :cascade do |t|
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150407185201) do
     t.string  "choice_one",        limit: 255
     t.string  "choice_two",        limit: 255
     t.integer "answer_id",         limit: 4
+    t.integer "player_id",         limit: 4
   end
 
   create_table "skill_players", force: :cascade do |t|
@@ -64,6 +65,15 @@ ActiveRecord::Schema.define(version: 20150407185201) do
     t.string   "description", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tattoos", force: :cascade do |t|
+    t.string "name", limit: 255
+  end
+
+  create_table "villains", force: :cascade do |t|
+    t.string  "name",      limit: 255
+    t.integer "tattoo_id", limit: 4
   end
 
 end

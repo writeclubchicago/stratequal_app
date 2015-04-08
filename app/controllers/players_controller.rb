@@ -46,6 +46,8 @@ def show
 	else
 		@player = Player.find_by(:id => params[:id])
 	end 
+	
+
 end
 
 def addplayerform

@@ -5,17 +5,17 @@
 <div>
 	<table>
 		<tr>
-			<th> First  </th> 
-			<th> Last  </th>
-			<th> Gender  </th>
-			<th> Tattoo_Id </th> 
+			<th>id</th>
+			<th>first_name</th> 
+			<th>last_name</th>
+			<th>gender</th>
 		</tr>
 		<% @players.each do |player| %>
 			<tr>
+				<td><%= player.id %></td>
 				<td><%= player.first_name %></td>
 				<td><%= player.last_name %></td>
 				<td><%= player.gender %></td>
-				<td><%= player.tattoo_id %></td>				
 			</tr>
 		<% end %>
 	</table>
