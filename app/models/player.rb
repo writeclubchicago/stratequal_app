@@ -1,4 +1,6 @@
 class Player < ActiveRecord::Base
+	# belongs_to :tattoo	
+	has_many :tattoos
 	has_many :skills #always PLURAL
 	has_many :scenarios #always PLURAL
 	has_many :player_answers

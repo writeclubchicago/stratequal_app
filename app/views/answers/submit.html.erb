@@ -8,14 +8,16 @@
 			<th> First  </th> 
 			<th> Last  </th>
 			<th> Gender  </th>
-			<th> Tattoo_Id </th> 
+			<th> Tattoo </th> 
 		</tr>
 		<% @players.each do |player| %>
 			<tr>
 				<td><%= player.first_name %></td>
 				<td><%= player.last_name %></td>
 				<td><%= player.gender %></td>
+				<td><%= player.tattoo_id %></td>	
 				<td><%= player.tattoo_id %></td>				
+				<td><%= player.occupation %></td>			
 			</tr>
 		<% end %>
 	</table>

@@ -1,4 +1,5 @@
 class Tattoo < ActiveRecord::Base
-	belongs_to :player
+	has_many :players #always PLURAL
 	belongs_to :villain
+	# belongs_to :player	
 end
