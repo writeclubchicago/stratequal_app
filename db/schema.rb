@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408011244) do
+ActiveRecord::Schema.define(version: 20150409185959) do
 
   create_table "answers", force: :cascade do |t|
     t.string  "name",        limit: 255
@@ -68,7 +68,8 @@ ActiveRecord::Schema.define(version: 20150408011244) do
   end
 
   create_table "tattoos", force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string  "name",      limit: 255
+    t.integer "player_id", limit: 4
   end
 
   create_table "villains", force: :cascade do |t|

@@ -2,8 +2,8 @@
 	SKILLS WILL BE YOUR ESCAPE <br> 
  </h1>
 <br> 
-<li><a href="/skills/new">New Skill</a></li>
-<li><a href="/todo">To Do</a></li>
+<!-- <li><a href="/skills/new">New Skill</a></li>
+<li><a href="/todo">To Do</a></li> -->
 <h2> 
 <div class="row">
 	<% @skills.each do |skill| %>
@@ -16,11 +16,11 @@
  <%= skill.description %> 
 
 <%=image_tag skill.image_url, width: '120', height: '120' %>
-
+<!-- 
 </a> 
 <br>
 	<%= submit_tag "Edit Skill" %>
-</a> 
+</a>  -->
 	</div>	
 	<% end %>
 </h2>
