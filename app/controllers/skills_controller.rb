@@ -6,6 +6,7 @@ end
 
 def show
 	@skill = Skill.find(params[:id])
+	@scenarios = Scenario.all 
 	end 
 end
 

@@ -7,6 +7,7 @@ def show
 	end
 
 def kidnap
+	@skills = Skill.all  
 end
 
 def poison

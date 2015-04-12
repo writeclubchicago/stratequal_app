@@ -1,10 +1,39 @@
 <h1> Oh no! StratIQue has kidnapped your daughter!</h1> 
 
-<h1> I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will use SQL on you.</h1> 
+<h1> I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. 
+ <br> But what I do have are a very particular set of skills, skills I have acquired over a very long career. 
+ <br> 
+ Skills that make me a nightmare for people like you. 
+ <br> 
+ If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you.  <br> 
+ But if you don't, I will look for you, I will find you, and I will use SQL on you.</h1> 
+<li><a href="/skills">Skills</a></li>
 
+<%= image_tag("Neeson.jpeg", width: '1200', height: '500') %>
 <li><a href="/kidnap">Kidnap</a></li>
 
 <li><a href="/poison">Poison</a></li>
 
 <li><a href="/pages">Main</a></li>
 <li><a href="/welcome">Welcome</a></li>
+
+<h2> 
+<div class="row">
+	<% @skills.each do |skill| %>
+  <!-- <div class="col-md-3 col-sm-3">	 -->
+  <div class="col-md-4 col-sm-1 col-sm-1">	 	
+<a href="/skills/<%= skill.id %>" ></li> 	
+	<h3> 
+ <%= skill.name %>
+ <br> 
+ <%= skill.description %> 
+
+<%=image_tag skill.image_url, width: '120', height: '120' %>
+<!-- 
+</a> 
+<br>
+	<%= submit_tag "Edit Skill" %>
+</a>  -->
+	</div>	
+	<% end %>
+

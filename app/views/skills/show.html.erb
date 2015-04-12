@@ -1,15 +1,27 @@
-
+<h2>     Today's date is <%=Date.today %> Time is <%=Time.now.strftime("%I:%M:%S %p")  %></h2> 
 <li><a href="/skills">Skills</a></li>
+<h1> Name: <%= @skill.name %> <br> 
+ Description: <%= @skill.description %> <br> 
+<%=image_tag @skill.image_url %> <br> 
+ <%= @skill.detail %> <br> 
+	 <%= @skill.detailtwo %> <br> 
+	 <%= @skill.detailthree %> <br> 
+     <%= @skill.detailfour %> </h1> 
+<h2> 
+<div class="row">
+	<% @scenarios.each do |scenario| %>
+  <!-- <div class="col-md-3 col-sm-3">	 -->
+<div class="col-md-4 col-sm-1 col-sm-1">	 	
+<a href="/scenarios/<%= scenario.id %>" ></li> 	
 
-<h1> Name: <%= @skill.name %> </h1> 
-<h1> Description: <%= @skill.description %> </h1> 
-<h1> 
-<%=image_tag @skill.image_url %>
-</h1> 
-<h1> Use Skill </h1> 
+<!--  <%= scenario.id %>
+ <%= scenario.scenario %> -->
+ <br>
+ <%= scenario.short_description %>  
+ <br> 
+<!--  <%= scenario.description %> 
+> -->
+	</div>	
+	<% end %>
+</h2>
 
-<li><a href="/scenarios">Scenarios</a></li>
-
-<!-- <a href=" /skills/<%= @skill.id %>/edit">Edit</a>
-<a href="/skills/<%= @skill.id %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>
- -->
