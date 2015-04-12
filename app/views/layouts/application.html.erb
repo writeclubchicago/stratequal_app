@@ -29,13 +29,17 @@
          <li><a href="/players">Players</a></li>
          <li><a href="/welcome">Welcome</a></li>
          <li><a href="/pages">Save The World</a></li>                  
-         <li><a href="/scenarios">Scenarios</a></li>          
+         <li><a href="/scenarios">Scenarios</a></li>
+         <li><a href="/weather">What's It Doing Outside?</a></li>                   
  <!--        <li><a href="/todo">To Do</a></li> -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown Text <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Read Me When Prompted <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
 <!--             <li><a href="/scenarios/show/{#1}">Scenario One</a></li> -->
-            <li><a href="/players?sort=gender">Action</a></li>
+
+            <li><a href="/tables">What About Tables?</a></li>
+            <li><a href="/joins">What About Joins?</a></li>            
+
             <li><a href="/players?sort=gender">Another action</a></li>
             <li><a href="/players?sort=gender">Something else here</a></li>
             <li class="divider"></li>
@@ -58,10 +62,15 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-
+    <% flash.each do |name, message| %>
+      <div class="alert alert-<%= name %>">
+        <%= message %>
+      </div>
+    <% end %>
 
 
   <%= yield %> 
+
 </div>
 <footer> 
 </footer> 

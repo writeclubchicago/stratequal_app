@@ -1,4 +1,6 @@
 <li><a href="/skills">Return to Skills</a></li>
+<li><a href="/tables">What about Tables?" </a></li>
+
 <h1>Great job!</h1>
 <h2>Here was the query you submitted:</h2>
 <pre><%= @query %></pre>
@@ -6,10 +8,10 @@
 <div>
 	<table>
 		<tr>
-			<th> First  </th> 
-			<th> Last  </th>
+			<th> First_Name  </th> 
+			<th> Last_Name  </th>
 			<th> Gender  </th>
-			<th> Job </th> 
+			<th> Occupation </th> 
 		</tr>
 		<% @players.each do |player| %>
 			<tr>

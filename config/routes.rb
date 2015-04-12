@@ -15,8 +15,8 @@ get '/scenarios' => 'scenarios#index'
 get '/scenarios/:id' => 'scenarios#show'
 
 post '/answers' => 'answers#submit'
-
-
+get '/tables' => 'answers#tables'
+get '/joins' => 'answers#joins'
 # NEW needs to always come before /id
 get '/players' => 'players#index'
 # get '/' => 'players#index'

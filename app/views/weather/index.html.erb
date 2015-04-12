@@ -1,9 +1,9 @@
-<h1> Blargh 
-	<br>
-Today's date is <%=Date.today %> 
+<h1> Today's date is <%=Date.today %> 
+Time is <%=Time.now.strftime("%I:%M:%S %p")  %>	
+
 </h1>
 <h2>
-puts "WOED is 12784308"	
+<!-- puts "WOED is 12784308"	 -->
 <br> 
 <%= @title %> 
 <br> Temperature is 
@@ -12,10 +12,10 @@ puts "WOED is 12784308"
 <%= @text %> 
 <br> 
 <%= @response.description.html_safe %> 
-<br> 
+<!-- <br> 
 <%= form_tag("/weather", method: "get") do %>
   <%= label_tag(:woeid, "Search for:") %>
   <%= text_field_tag(:woeid) %>
-  <%= submit_tag("SEARCH") %>
+  <%= submit_tag("SEARCH") %> -->
 <%end%>
 </h2> 
