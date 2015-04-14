@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stratequal</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ <!--      <a class="navbar-brand" href="#">Brand</a> -->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/skills">Skills <span class="sr-only">(current)</span></a></li>
+         <li><a href="/players">Players</a></li>
+         <li><a href="/welcome">Welcome</a></li>
+         <li><a href="/pages">Save The World</a></li>                  
+         <li><a href="/scenarios">Scenarios</a></li>
+         <li><a href="/weather">What's It Doing Outside?</a></li>                   
+ <!--        <li><a href="/todo">To Do</a></li> -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Read Me When Prompted <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+<!--             <li><a href="/scenarios/show/{#1}">Scenario One</a></li> -->
+
+            <li><a href="/tables">What About Tables?</a></li>
+            <li><a href="/joins">What About Joins?</a></li>            
+
+            <li><a href="/players?sort=gender">Another action</a></li>
+            <li><a href="/players?sort=gender">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="/players?sort=gender">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="/players?sort=gender">One more separated link</a></li>
+          </ul>
+        </li>
+    </ul>
+ <!--        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form> -->
+<!--         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/players/new">Add Player</a></li>
+        </ul> -->
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+    <% flash.each do |name, message| %>
+      <div class="alert alert-<%= name %>">
+        <%= message %>
+      </div>
+    <% end %>
+
+
+  <%= yield %> 
+
+</div>
+<footer> 
+</footer> 
+</body>
+</html>

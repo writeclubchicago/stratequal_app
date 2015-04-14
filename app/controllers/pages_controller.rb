@@ -20,5 +20,7 @@ end
 def home # javascript stuff 
 end 
 
+def theme
+end 
 
 end

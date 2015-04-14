@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 get '/pages/:id' => 'pages#show'
 get '/pages' => 'pages#index'
 
-
 get '/scenarios' => 'scenarios#index'
 get '/scenarios/:id' => 'scenarios#show'
 
@@ -44,5 +43,8 @@ get '/poison' => 'pages#poison'
 get '/welcome' => 'pages#welcome'
 get '/home' => 'pages#home'
 get '/homeroom' => 'pages#homeroom'
+get '/theme' => 'pages#theme'
+
+
 end 
 
