@@ -1,20 +1,24 @@
 <!-- <li><a href="/skills/new">New Skill</a></li>
 <li><a href="/todo">To Do</a></li> -->
+<div class="container">
 <h5> 
-<div class="row">
-	<% @skills.each do |skill| %>
-  <!-- <div class="col-md-3 col-sm-3">	 -->
-  <div class="col-md-4 col-sm-1 col-sm-1">	 	
-<a href="/skills/<%= skill.id %>" ></li> 	
-	<!-- <h3>  -->
- <%= skill.name %> / <%= skill.description %> 
 
-<%=image_tag skill.image_url, width: '120', height: '120' %>
-	</div>	
-	<br> 
-	<% end %>
+	<div class="row">
+		<% @skills.each do |skill| %>
+	  <!-- <div class="col-md-3 col-sm-3">	 -->
+		<div class="col-md-4 col-sm-1 skills-padding">	 	
+			<a href="/skills/<%= skill.id %>" ></li> 	
+		<!-- <h3>  -->
+	 		<%= skill.name %> / <%= skill.description %> 
 
+			<%=image_tag skill.image_url, width: '120', height: '120' %>
+		</div>	
+		
+		<% end %>
+	</div>
 </h5> 
+</div>
+			
 <!-- </h1> -->
 <!-- 
 Today's date is <%=Date.today %> 

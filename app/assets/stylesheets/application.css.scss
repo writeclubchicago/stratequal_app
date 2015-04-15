@@ -5,27 +5,63 @@
 @import "compass/css3";
 
 #main-content-header {
-	padding: 30px;
+	// padding: 20px;
+	padding: 0 0 0 0;	
 }
-header {
+#main-content {
+	padding-bottom: 50px;
 
+}
+
+#main-content-header {
+	padding-bottom: 20px;
+}
+
+.skills-padding {
+	margin-bottom: 80px;
+}
+
+// span {
+// 	float: left;
+//     width: 500px;
+
+// }
+
+header {
+padding: 0px; 
 }
 
 .sea {
 	background-image: url(../assets/MillPark.jpg);
 	background-size: 1500px 550px; 
+	width: 100%;
+	
 }
 
 h4 {
 	font-size: 25px;
 }
+// we need to come back to this - find the headers it was styling
+// h1,h5 {
+// 	margin-top: 100px;
+//     margin-bottom: 100px;
+//     margin-right: 150px;
+//     margin-left: 50px;
+// }
 
-h1 {
-	    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 50px;
+h5 
+{
+	font-size: 20px; 
 }
+
+h6 {
+		font-size: 20px; 
+	    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

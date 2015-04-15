@@ -1,6 +1,17 @@
+<div class="container">
 <li><a href="/scenarios">All Scenarios</a></li>
 
 <h1> <%= @scenario.short_description %> </h1> 
+<div class="span6">
+      <h2>Enter SQL</h2>
+
+        <%= form_tag '/answers' do %>
+          <%= hidden_field_tag(:id, params[:id]) %>
+          <%= text_area_tag :answer %>
+          <%= submit_tag "Run Query" %>
+        <% end %>
+</div>
+
 <h1> <%= @scenario.scenario %> <br> 
 
      <%= @scenario.description %> <br> 
@@ -14,23 +25,14 @@
 
  -->
 
-<div class="span6">
-      <h2>Enter SQL</h2>
-        <!-- <textarea class="field span12" id="textarea" rows="6" placeholder="Type 'Select * from Players'"></textarea>
-        <button class="btn" onclick="changeColor(this)">Run</button> -->
-        <%= form_tag '/answers' do %>
-          <%= hidden_field_tag(:id, params[:id]) %>
-          <%= text_area_tag :answer %>
-          <%= submit_tag "Run Query" %>
-        <% end %>
-</div>
+
 
   <br>
   
 
 
 </div>  -->
-
+</div> 
 <!-- 
 
 <form role="form">
