@@ -23,4 +23,9 @@ end
 def theme
 end 
 
+def home
+
+	end
+	
+
 end

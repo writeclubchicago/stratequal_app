@@ -44,7 +44,7 @@ get '/welcome' => 'pages#welcome'
 get '/home' => 'pages#home'
 get '/homeroom' => 'pages#homeroom'
 get '/theme' => 'pages#theme'
-
+get '/contact' => 'pages#contact'
 
 end 
 
