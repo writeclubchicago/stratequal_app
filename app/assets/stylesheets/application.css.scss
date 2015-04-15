@@ -1,7 +1,16 @@
+
 @import "jednotka/bootstrap/bootstrap.min";
 
 @import "jednotka/jednotka_green";
 @import "compass/css3";
+
+#main-content-header {
+	padding: 10px;
+}
+.sea {
+	background-image: url(../assets/MillPark.jpg);
+	background-size: 750px 750px; 
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
