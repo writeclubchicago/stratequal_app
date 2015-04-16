@@ -1,15 +1,18 @@
-<h1> Today's date is <%=Date.today %> 
+<div class="container">
+<h4> Today's date is <%=Date.today %> 
 Time is <%=Time.now.strftime("%I:%M:%S %p")  %>	
 
-</h1>
-<h2>
+</h4>
+<h4>
 <!-- puts "WOED is 12784308"	 -->
 <br> 
 <%= @title %> 
 <br> Temperature is 
 <%=@temp %>
+<br> 
 <br> Weather is 
 <%= @text %> 
+<br> 
 <br> 
 <%= @response.description.html_safe %> 
 <!-- <br> 
@@ -18,4 +21,5 @@ Time is <%=Time.now.strftime("%I:%M:%S %p")  %>
   <%= text_field_tag(:woeid) %>
   <%= submit_tag("SEARCH") %> -->
 <%end%>
-</h2> 
+</h4> 
+</div> 
